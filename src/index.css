@@ -14,8 +14,7 @@ body {
 }
 
 html {
-  /* padding: 9.313rem 3.75rem 7.688rem 6.25rem; */
-  padding: 8vw;  /* background-color: #f5f6fa; */
+  padding: 8vw;
 }
 
 ul {
@@ -44,6 +43,3 @@ a.active {
   user-select: none;
 }
 
-/* form {
-  margin: 3vw;
-} */
