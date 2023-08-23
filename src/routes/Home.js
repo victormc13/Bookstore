@@ -1,8 +1,8 @@
-import BooksLogic from '../components/BooksLogic';
+import Library from '../components/Library';
 
 function Home() {
   return (
-    <BooksLogic />
+    <Library />
   );
 }
 
