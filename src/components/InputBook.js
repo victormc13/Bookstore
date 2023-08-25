@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/bookSlice';
+import { postBooks, fetchBooks } from '../redux/bookStoreApi';
 import styles from './Components.module.css';
 
 function InputBook() {
@@ -20,7 +20,14 @@ function InputBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = uuidv4();
-    dispatch(addBook({ id, title, author }));
+    dispatch(postBooks({
+      newBook: {
+        item_id: id,
+        title,
+        author,
+        category: '',
+      },
+    })).then(() => { dispatch(fetchBooks()); });
     setTitle('');
     setAuthor('');
   };
@@ -28,9 +35,9 @@ function InputBook() {
   return (
     <div className={styles.formContainer}>
       <span>ADD NEW BOOK</span>
-      <form onSubmit={handleSubmit}>
-        <input className={styles.title} type="text" placeholder="Add title" value={title} onChange={handleChangeTitle} />
-        <input className={styles.author} type="text" placeholder="Add author" value={author} onChange={handleChangeAuthor} />
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input className={styles.title} type="text" placeholder="Add title" value={title} onChange={handleChangeTitle} required />
+        <input className={styles.author} type="text" placeholder="Add author" value={author} onChange={handleChangeAuthor} required />
         <button className={styles.button} type="submit">ADD BOOK</button>
       </form>
     </div>
