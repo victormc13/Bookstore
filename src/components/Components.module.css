@@ -3,7 +3,7 @@
   display: grid;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
   grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
   border-radius: 4px;
   border-bottom: 1px solid #e8e8e8;
@@ -45,8 +45,9 @@
   margin: 3vw;
   padding: 1vw 2vw;
   display: grid;
+  gap: 0;
   background-color: #fff;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 320px));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 320px));
   border: 2px solid #e8e8e8;
   border-radius: 4px;
 }
@@ -67,17 +68,10 @@
 
 .bookDetails {
   width: 600px;
-
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-shrink: 1; */
   display: grid;
   align-items: center;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  /* background-color: red; */
 }
 
 .progress {
