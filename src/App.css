@@ -1,6 +1,6 @@
 .App {
   width: 100%;
-  height: auto;
+  min-height: 92.5vh;
   color: #08f;
   border-radius: 4px;
   border: 1px solid #e8e8e8;

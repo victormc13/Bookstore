@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchBooks } from '../redux/bookStoreApi';
+import styles from './Components.module.css';
 import Book from './Book';
 import InputBook from './InputBook';
 
@@ -16,9 +17,8 @@ function Library() {
 
   return (
     <>
-      {isLoading && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
-      <ul>
+      <ul className={styles.bookContainer}>
         {isReady
           && Object.keys(bookItems).map((key) => (
             bookItems[key].map((book) => (
@@ -32,6 +32,7 @@ function Library() {
           ))}
       </ul>
       <InputBook />
+      {isLoading && <span>Loading...</span>}
     </>
   );
 }
