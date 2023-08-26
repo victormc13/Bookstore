@@ -9,6 +9,7 @@ function Header() {
         <NavLink to="/">BOOKS</NavLink>
         <NavLink to="/categories">CATEGORIES</NavLink>
       </nav>
+      <button type="button" aria-label="text" className={styles.headerBtn}><i className="fa-solid fa-user" /></button>
     </header>
   );
 }

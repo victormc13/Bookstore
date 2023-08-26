@@ -1,5 +1,5 @@
 .header {
-  padding: 1rem;
+  padding: 0.5rem;
   display: grid;
   align-items: center;
   text-align: center;
@@ -10,11 +10,42 @@
   background-color: #fff;
 }
 
+.headerBtn {
+  padding: 1em;
+  width: 3.45em;
+  margin: 1em auto;
+  font-size: 1rem;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid var(--CL-primary-white-three);
+  color: var(--CL-primary-blue);
+  background: none;
+  cursor: pointer;
+}
+
+.bookContainer {
+  min-height: 50vh;
+  max-height: 55vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.bookContainer::-webkit-scrollbar {
+  background-color: #555;
+  width: 5px;
+}
+
+.bookContainer::-webkit-scrollbar-thumb {
+  background: #0290ff;
+  border-radius: 8px;
+}
+
 .bookItem {
   min-height: 180px;
   margin: 3vw;
   padding: 1vw 2vw;
   display: grid;
+  background-color: #fff;
   grid-template-columns: repeat(auto-fit, minmax(230px, 320px));
   border: 2px solid #e8e8e8;
   border-radius: 4px;
@@ -25,7 +56,61 @@
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  grid-column: 2 span;
   color: #000;
+}
+
+.bookBtn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bookDetails {
+  width: 600px;
+
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 1; */
+  display: grid;
+  align-items: center;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  /* background-color: red; */
+}
+
+.progress {
+  width: 300px;
+  height: 4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #121212;
+  font-size: 2rem;
+  border-right: 2px solid #e8e8e8;
+}
+
+.porcentage {
+  display: flex;
+  flex-direction: column;
+}
+
+.porcentage :nth-child(2) {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.ovalProgress {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: transparent;
 }
 
 .bookDescription .bookAuthor {
@@ -39,7 +124,7 @@
 .editBtn {
   padding: 0.5rem;
   margin-top: 1rem;
-  max-width: 100px;
+  width: 100px;
   border: none;
   border-width: 20px;
   border-left: 1px solid #e8e8e8;
@@ -61,7 +146,7 @@
 }
 
 .formContainer form {
-  margin: 1rem 0;
+  margin: 1rem auto;
   display: grid;
   place-items: center;
   gap: 1rem;
@@ -86,4 +171,43 @@
   font-weight: bold;
   color: #fff;
   background-color: #0290ff;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+}
+
+.status :nth-child(1) {
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.status :nth-child(2) {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #000;
+}
+
+.status button {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
 }
