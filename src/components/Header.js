@@ -5,11 +5,14 @@ function Header() {
   return (
     <header className={styles.header}>
       <h1>Bookstore CMS</h1>
-      <nav>
+      <nav className={styles.navLinks}>
         <NavLink to="/">BOOKS</NavLink>
         <NavLink to="/categories">CATEGORIES</NavLink>
       </nav>
-      <button type="button" aria-label="text" className={styles.headerBtn}><i className="fa-solid fa-user" /></button>
+      <div />
+      <div className={styles.userBtn}>
+        <button type="button" aria-label="text" className={styles.headerBtn}><i className="fa-solid fa-user" /></button>
+      </div>
     </header>
   );
 }

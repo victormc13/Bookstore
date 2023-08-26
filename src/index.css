@@ -29,6 +29,11 @@ html {
   padding: 2vw;
 }
 
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
 ul {
   list-style: none;
 }

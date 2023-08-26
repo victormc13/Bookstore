@@ -3,17 +3,28 @@
   display: grid;
   align-items: center;
   text-align: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
   border-radius: 4px;
   border-bottom: 1px solid #e8e8e8;
   background-color: #fff;
 }
 
+.header .userBtn {
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .navLinks {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .headerBtn {
   padding: 1em;
   width: 3.45em;
-  margin: 1em auto;
+  margin: 0;
   font-size: 1rem;
   position: relative;
   border-radius: 50%;

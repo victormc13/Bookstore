@@ -2,7 +2,7 @@ import Library from '../components/Library';
 
 function Home() {
   return (
-    <Library /* className={styles}  *//>
+    <Library />
   );
 }
 
